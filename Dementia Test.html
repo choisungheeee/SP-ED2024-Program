@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dementia Test</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .top {
+            text-align: right;
+            padding: 10px 50px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+        }
+        .top a {
+            color: darkgray;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .top a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+        .test {
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 800px;
+        }
+        .test div {
+            display: inline-block;
+            border: 3px solid #e0e0e0;
+            height: 25px;
+            margin-right: 30px;
+            margin-top: 10px;
+            border-radius: 2px;
+        }
+        .test span {
+            font-size: 1.4em;
+            margin-right: 30px;
+            color: #333;
+        }
+        .description {
+            color: #555;
+            text-align: center;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+        }
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #28a745;
+            color: #fff;
+        }
+        td {
+            background-color: #fafafa;
+        }
+        input[type="radio"] { margin: auto; }
+        .question { 
+            text-align: left; 
+            padding-left: 10px;
+        }
+        .btn {
+            display: block;
+            width: 200px;
+            height: 40px;
+            margin: 30px auto;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+        .btn a {
+            color: white;
+            text-decoration: none;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <a href="#">Logout</a>
+        <a href="Mypage.html">Mypage</a>
+        <a href="#">Community</a>
+    </div>
+    <div class="test">
+        <span>Level 8</span>
+        <div></div>
+        <span>Test Frequency: Twice a Year</span>
+        <div></div>
+        <span>32 items</span>
+    </div>
+    <div class="description">
+        For an accurate assessment, please respond honestly. <br>
+        Based on your answers, tailored advice for dementia prevention and 
+        early detection strategies will be offered.
+    </div><br>
+    <table>
+        <tr>
+            <th rowspan="2" style="width: 70px;">Number</th>
+            <th rowspan="2" style="width: 700px;">question</th>
+            <th colspan="2" style="width: 80px;">reply</th>
+        </tr>
+        <tr>
+            <th>Yes</th>
+            <th>No</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td class="question">I find it difficult to remember phone numbers or 
+                people's names.</td>
+            <td><input type="radio" name="1"></td>
+            <td><input type="radio" name="1"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td class="question">Sometimes I can't remember when something happened.</td>
+            <td><input type="radio" name="2"></td>
+            <td><input type="radio" name="2"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td class="question">I forget stories I heard a few days ago.</td>
+            <td><input type="radio" name="3"></td>
+            <td><input type="radio" name="3"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td class="question">I forget stories I've heard a long time ago.</td>
+            <td><input type="radio" name="4"></td>
+            <td><input type="radio" name="4"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td class="question">I find it hard to quickly adapt when there are changes 
+                in my routine.</td>
+            <td><input type="radio" name="5"></td>
+            <td><input type="radio" name="5"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td class="question">I sometimes forget important things for myself 
+                (ex. spouse’s birthday, wedding anniversary).</td>
+            <td><input type="radio" name="6"></td>
+            <td><input type="radio" name="6"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td class="question">I occasionally repeat the same story to others.</td>
+            <td><input type="radio" name="7"></td>
+            <td><input type="radio" name="7"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td class="question">I forget what I’ve done and end up repeating 
+                the same thing.</td>
+            <td><input type="radio" name="8"></td>
+            <td><input type="radio" name="8"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td class="question">I sometimes forget appointments I’ve made.</td>
+            <td><input type="radio" name="9"></td>
+            <td><input type="radio" name="9"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td class="question">During a conversation, 
+                I forget what I was just talking about.</td>
+            <td><input type="radio" name="10"></td>
+            <td><input type="radio" name="10"></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td class="question">I sometimes miss taking my medication on time.</td>
+            <td><input type="radio" name="11"></td>
+            <td><input type="radio" name="11"></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td class="question">When I go shopping for various items, 
+                I sometimes forget one or two of them.</td>
+            <td><input type="radio" name="12"></td>
+            <td><input type="radio" name="12"></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td class="question">I have forgotten to turn off the gas or 
+                burned food before.</td>
+            <td><input type="radio" name="13"></td>
+            <td><input type="radio" name="13"></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td class="question">I repeat the same questions to others.</td>
+            <td><input type="radio" name="14"></td>
+            <td><input type="radio" name="14"></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td class="question">I leave items behind or forget 
+                to take something with me.</td>
+            <td><input type="radio" name="15"></td>
+            <td><input type="radio" name="15"></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td class="question">I have to double-check whether 
+                I have done something or not.</td>
+            <td><input type="radio" name="16"></td>
+            <td><input type="radio" name="16"></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td class="question">I have trouble quickly coming up with the words 
+                or expressions I want to use.</td>
+            <td><input type="radio" name="17"></td>
+            <td><input type="radio" name="17"></td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td class="question">I sometimes can’t remember the names of 
+                objects quickly.</td>
+            <td><input type="radio" name="18"></td>
+            <td><input type="radio" name="18"></td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td class="question">I find it difficult to write personal or 
+                business letters.</td>
+            <td><input type="radio" name="19"></td>
+            <td><input type="radio" name="19"></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td class="question">I speak less and less over time.</td>
+            <td><input type="radio" name="20"></td>
+            <td><input type="radio" name="20"></td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td class="question">I can’t grasp the gist of newspaper or magazine articles.</td>
+            <td><input type="radio" name="21"></td>
+            <td><input type="radio" name="21"></td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td class="question">I have to read the same sentence multiple times 
+                to understand it 
+                when reading a book.</td>
+            <td><input type="radio" name="22"></td>
+            <td><input type="radio" name="22"></td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td class="question">I have trouble following the storyline on television.</td>
+            <td><input type="radio" name="23"></td>
+            <td><input type="radio" name="23"></td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td class="question">I sometimes fail to recognize close friends or 
+                relatives immediately.</td>
+            <td><input type="radio" name="24"></td>
+            <td><input type="radio" name="24"></td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td class="question">I forget where I placed items and have to 
+                search for them later.</td>
+            <td><input type="radio" name="25"></td>
+            <td><input type="radio" name="25"></td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td class="question">I can’t remember places I’ve visited before.</td>
+            <td><input type="radio" name="26"></td>
+            <td><input type="radio" name="26"></td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td class="question">My sense of direction has worsened.</td>
+            <td><input type="radio" name="27"></td>
+            <td><input type="radio" name="27"></td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td class="question">I have gotten lost or wandered around.</td>
+            <td><input type="radio" name="28"></td>
+            <td><input type="radio" name="28"></td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td class="question">I forget the usual place where I keep things and 
+                end up looking in the wrong place.</td>
+            <td><input type="radio" name="29"></td>
+            <td><input type="radio" name="29"></td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td class="question">My ability to do calculations has declined.</td>
+            <td><input type="radio" name="30"></td>
+            <td><input type="radio" name="30"></td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td class="question">I make mistakes in managing money.</td>
+            <td><input type="radio" name="31"></td>
+            <td><input type="radio" name="31"></td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td class="question">I am clumsy using tools or equipment 
+                I used to use regularly.</td>
+            <td><input type="radio" name="32"></td>
+            <td><input type="radio" name="32"></td>
+        </tr>
+    </table>
+    <br>
+    <div class="btn">
+        <a href="Mypage.html">Submit</a>
+    </div>
+    <br><br><br>
+</body>
+</html>

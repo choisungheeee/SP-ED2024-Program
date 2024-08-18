@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+<style>
+    table {
+        width: 500px;
+        height: 550px;
+        margin: auto;        
+    }
+    .email {
+        width: 250px;
+        height: 32px;
+        font-size: 15px;
+        border: 0;
+        border-color: lightgray;
+        border-radius: 15px;
+        outline: none;
+        padding-left: 10px;
+        background-color: rgb(233,233,233);
+    }
+    .text {
+        width: 500px;
+        height: 32px;
+        font-size: 15px;
+        border: 0;
+        border-radius: 15px;
+        outline: none;
+        padding-left: 10px;
+        background-color: rgb(233,233,233);
+    }
+    select {
+        width: 220px;
+        height: 32px;
+        font-size: 15px;
+        border: 1;
+        border-color: lightgray;
+        border-radius: 15px;
+        outline: none;
+        padding-left: 10px;
+    }
+    .description {
+        font-size: 0.85em;
+        font-style: italic;
+        color: darkgray;
+    }
+    .btn {
+        width: 500px;
+        height: 32px;
+        font-size: 15px;
+        border: 0;
+        border-radius: 15px;
+        outline: none;
+        padding-left: 10px;
+        background-color: #28a746d7;
+    }
+    .btn:active {
+        width: 500px;
+        height: 32px;
+        font-size: 15px;
+        border: 0;
+        border-radius: 15px;
+        outline: none;
+        padding-left: 10px;
+        background-color: #1e7e34c3;
+    }
+</style>
+</head>
+<body>
+<form action="login.html">
+    <table>
+        <tr><td><h2>Join</h2></td></tr>
+        <tr><td>ID</td></tr>
+        <tr><td><input type="text" class="text"></td></tr>
+        <tr><td>Password</td></tr>
+        <tr><td><input type="password" class="text"></td></tr>
+        <tr><td>Check the password</td></tr>
+        <tr><td><input type="password" class="text"></td></tr>
+        <tr><td>Name</td></tr>
+        <tr><td><input type="text" class="text"></td></tr>
+        <tr><td>Birth</td></tr>
+        <tr><td><input type="date" class="text"></td></tr>
+        <tr><td>E-mail</td></tr>
+        <tr><td><input type="text" class="email"> @ 
+            <select>
+                <option>naver.com</option>
+                <option>gmail.com</option>
+                <option>daum.net</option>
+                <option>nate.com</option>
+            </select>
+        </td></tr>
+        <tr><td>Gender </td></tr>
+        <tr><td>
+            <select>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </td></tr> 
+        <tr><td>I have a family member with dementia</td></tr>
+        <tr><td>
+            <select>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </td></tr>     
+        <tr><td>Your Height</td></tr>
+        <tr><td><input class="text" type="number" min="0" max="200" step="1"></td></tr>
+        <tr><td>Your Weight</td></tr>
+        <tr><td><input class="text" type="number" min="0" max="200" step="1"></td></tr>
+        <tr><td class="description">"Your height and weight are needed to provide you with appropriate exercise recommendations and dietary advice."</td></tr>
+        <tr><td>Disease</td></tr>
+        <tr><td>
+            <select>
+                <option>none</option> 
+                <option>High blood pressure</option> <!--고혈압-->
+                <option>Diabetes</option>            <!--당뇨병-->
+                <option>heart disease</option>       <!--심장병-->
+                <option>Others</option>
+            </select>
+        </td></tr>
+        <tr><td><input type="submit" value="Sign up" class="btn" onclick="alert('Successful subscription!')"></td></tr>
+    </table>
+</form>
+</body>
+</html>
