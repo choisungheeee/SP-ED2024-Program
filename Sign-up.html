@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 80%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .top-nav {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .top-nav a {
+            margin-left: 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .top-nav a:hover {
+            text-decoration: underline;
+        }
+        .banner {
+            background-color: green;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+        }
+        .section {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .block {
+            background-color: #f9fafb;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 50px;
+            margin-left: 170px;
+            border-collapse: separate;
+        }
+        .cell {
+            display: block;
+            margin-bottom: 20px;
+        }
+        .email {
+            width: 250px;
+            height: 32px;
+            font-size: 15px;
+            border: 0;
+            border-color: lightgray;
+            border-radius: 15px;
+            outline: none;
+            padding-left: 10px;
+            background-color: rgb(233,233,233);
+        }
+        .text {
+            width: 500px;
+            height: 32px;
+            font-size: 15px;
+            border: 0;
+            border-radius: 15px;
+            outline: none;
+            padding-left: 10px;
+            background-color: rgb(233,233,233);
+        }
+        .choose {
+            width: 510px;
+        }
+        select {
+            width: 220px;
+            height: 32px;
+            font-size: 15px;
+            border: 1;
+            border-color: lightgray;
+            border-radius: 15px;
+            outline: none;
+            padding-left: 10px;
+        }
+        .description {
+            font-size: 0.85em;
+            font-style: italic;
+            color: darkgray;
+        }
+        .btn {
+            width: 510px;
+            height: 35px;
+            margin-top: 30px;
+            font-size: 17px;
+            border: 0;
+            border-radius: 15px;
+            outline: none;
+            padding-left: 10px;
+            background-color: #28a746d7;
+            color: white;
+        }
+        .btn:active {
+            background-color: #1e7e34c3;
+        }
+        .additional-info {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-nav">
+            <a href="#">Community</a>
+            <a href="#">My Page</a>
+            <a href="#">Login</a>
+        </div>
+
+        <div class="banner">
+            <h1>BTE FTE</h1>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <div class="block">
+                    <form action="login.html">
+                        <table>
+                            <tr><td><h2>Join</h2></td></tr>
+                            <tr><td>ID</td></tr>
+                            <tr class="cell"><td><input type="text" class="text"></td></tr>
+                            <tr><td>Password</td></tr>
+                            <tr class="cell"><td><input type="password" class="text"></td></tr>
+                            <tr><td>Check the password</td></tr>
+                            <tr class="cell"><td><input type="password" class="text"></td></tr>
+                            <tr><td>Name</td></tr>
+                            <tr class="cell"><td><input type="text" class="text"></td></tr>
+                            <tr><td>Birth</td></tr>
+                            <tr class="cell"><td><input type="date" class="text"></td></tr>
+                            <tr><td>E-mail <br>
+                                <span class="description">Please enter your email to receive notifications 
+                                    during the trial period.</span></td></tr>
+                            <tr class="cell"><td><input class="email" type="text"> @ 
+                                <select>
+                                    <option>gmail.com</option>
+                                    <option>naver.com</option>                                    
+                                    <option>daum.net</option>
+                                    <option>nate.com</option>
+                                </select>
+                            </td></tr>
+                            <tr><td>Gender</td></tr>
+                            <tr class="cell"><td>
+                                <select class="choose">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </td></tr>
+                            <tr><td>I have a family member with dementia</td></tr>
+                            <tr class="cell"><td>
+                                <select class="choose">
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </td></tr>
+                            <tr><td>Your Height <br>
+                                <span class="description">"Your height and weight are needed to provide you with appropriate exercise recommendations and dietary advice."</span>
+                            </td></tr>
+                            <tr class="cell"><td><input class="text" type="number" min="0" max="200" step="1"></td></tr>
+                            <tr><td>Your Weight <br>
+                                <span class="description">"Your height and weight are needed to provide you with appropriate exercise recommendations and dietary advice."</span>
+                            </td></tr>
+                            <tr class="cell"><td><input class="text" type="number" min="0" max="200" step="1"></td></tr>
+                            <tr><td>Disease</td></tr>
+                            <tr class="cell"><td>
+                                <select id="disease-select" class="choose">
+                                    <option>none</option> 
+                                    <option>High blood pressure</option>
+                                    <option>Diabetes</option>
+                                    <option>heart disease</option>
+                                    <option>Others</option>
+                                </select>
+                                <div id="additional-info" class="additional-info">
+                                    <input type="text" class="text" placeholder="Please specify">
+                                </div>
+                            </td></tr>
+                            <tr><td><input type="submit" value="Sign up" class="btn" onclick="alert('Successful subscription!')"></td></tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('disease-select').addEventListener('change', function() {
+            var additionalInfo = document.getElementById('additional-info');
+            if (this.value === 'Others') {
+                additionalInfo.style.display = 'block'; // Show the additional input
+            } else {
+                additionalInfo.style.display = 'none'; // Hide the additional input
+            }
+        });
+    </script>
+</body>
+</html>

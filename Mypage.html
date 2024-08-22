@@ -3,113 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mypage</title>
-
+    <title>Test Result Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .top {
-            text-align: right;
-            padding: 10px 50px;
+
+        .container {
+            width: 80%;
             background-color: #ffffff;
-            border-bottom: 1px solid #ddd;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
         }
-        .top a {
-            color: darkgray;
+
+        /* Top Navigation */
+        .top-nav {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .top-nav a {
+            margin-left: 20px;
+            color: #333;
             text-decoration: none;
-            margin-left: 10px;
+            font-size: 16px;
         }
-        .top a:hover {
-            color: black;
+
+        .top-nav a:hover {
             text-decoration: underline;
         }
-        .head, table {
-            margin-left: 20px;
+
+        /* Banner Section */
+        .banner {
+            background-color: green;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            margin-bottom: 20px;
+            border-radius: 10px;
         }
-        table { 
-            width: 1000px;
-            padding: 15px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        .banner h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
         }
-        #level {
-            color: green;
-            font-size: 2em;
+
+        .content {
+            display: flex;
+            justify-content: space-between;
         }
-        #description {
-            color: gray;
+
+        /* Left Section */
+        .left-section {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .left-section .block {
+            background-color: #f9fafb;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: 45%;
+        }
+
+        .block h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .block p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        /* Right Section */
+        .right-section {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .right-section .profile,
+        .right-section .graph {
+            background-color: #f9fafb;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            height: 45%;
+        }
+
+        .profile h3 {
+            margin-top: 0px;
+            margin-bottom: 5px;
+            font-size: 1.5em;
+        }
+
+        .profile p {
+            margin-top: 0;
+            font-size: 0.85em;
+            font-style: italic;
+            color: darkgray;
+        }
+
+        .profile-content {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile img {
+            width: 200px;
+            margin-top: 10px;
+        }
+
+        .profile-content span {
             font-size: 0.9em;
         }
-        .content {
-            line-height: 25px;
+
+        .graph h3 {
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .graph span {
+            text-decoration: underline;
+        }
+
+        .graph p {
+            margin-top: 0;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            font-size: 0.85em;
+            font-style: italic;
+            color: darkgray;
+        }
+
+        .graph img {
+            width: 500px;
+            object-fit: cover;
+            border-radius: 1px;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="top">
-        <a href="">Logout</a>
-        <a href="Mypage.html">Mypage</a>
-        <a href="">Community</a>
+    <div class="container">
+        <!-- Top Navigation -->
+        <div class="top-nav">
+            <a href="#">Community</a>
+            <a href="#">My Page</a>
+            <a href="#">Log out</a>
+        </div>
+
+        <!-- Banner Section -->
+        <div class="banner">
+            <h1>BTE FTE</h1>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Left Section -->
+            <div class="left-section">
+                <div class="block">
+                    <h3>🏃‍♂ Exercise Guidelines</h3>
+                    <ul>
+                        <li><strong>Walking</strong> : Walking for about 30 minutes daily helps maintain heart health and overall fitness. It is low-impact and safe, and it positively impacts cognitive function.</li>
+                        <li><strong>Resistance Band Exercises</strong> : Using resistance bands allows for easy strength training. You can include simple exercises for both upper and lower body.</li>
+                        <li><strong>Chair Stand-ups</strong> : Repeatedly standing up from a chair helps strengthen the lower body.</li>
+                    </ul>              
+                </div>
+                <div class="block">
+                    <h3>🍽 Diet Guidelines</h3>
+                    <ul>
+                        <li><strong>Fruits and Vegetables</strong> : Consume fresh fruits and vegetables daily. Especially beneficial are strawberries, blueberries, spinach, and broccoli for brain health.</li>
+                        <li><strong>Whole Grains</strong> : Include whole grains like brown rice, oats, and whole wheat to ensure adequate fiber and nutrients.</li>
+                        <li><strong>Olive Oil</strong> : Use olive oil for healthy fats.</li>
+                        <li><strong>Omega-3 Fatty Acids</strong> : Fatty fish such as salmon, mackerel, and sardines are rich in omega-3 fatty acids, which are good for brain health.</li>
+                        <li><strong>Chocolate</strong> : Dark chocolate is rich in flavonoids and supports brain health.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="right-section">
+                <div class="profile">
+                    <h3>Personal Profile</h3>
+                    <p>Your age, personal level, height, and weight are visible only to you. <br>On the community page, this information will be anonymized, and your name will be displayed as a nickname. We are committed to protecting your personal information at all times.</p>
+                    <div class="profile-content">
+                        <img src="profile_image.png" alt="">
+                        <ul>
+                            <li><strong>Name</strong> : John Baker</li>
+                            <li><strong>Age</strong> : 68</li>
+                            <li><strong>Gender</strong> : Male</li>
+                            <li><strong>Level</strong> : Level 3 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>(early stages of dementia)</span></li>
+                            <li><strong>Height</strong> : 178cm</li>
+                            <li><strong>Weight</strong> : 72.1kg</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="graph">
+                    <h3>Test Results</h3>
+                    <p><span>X-axis</span> : Represents the dates on which the tests were taken. Each date shows the specific point in time when the test was conducted.</p>
+                    <p><span>Y-axis</span> : Represents the test result levels. These levels indicate the severity of dementia, with higher numbers reflecting more severe conditions.</p>
+                    <img src="Test history graph.png" alt="">
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="head">
-        <h2>Here are your results &nbsp; <span id="level">Level 8</span></h2><hr>
-        <span id="description">Following these exercise and dietary guidelines can help maintain 
-            a healthy state, improve brain health, and enhance overall well-being.</span>
-    </div><br><br>
-    
-    <table>
-        <tr><td><h3>🏃‍♂ Exercise Guidelines</h3></td></tr>
-        <tr><td>1. <strong>Weekly Exercise Plan</strong></td></tr>
-        <tr><td class="content"> - Aim for at least 150 minutes of moderate-intensity 
-            aerobic exercise or 75 minutes of high-intensity aerobic exercise each week. 
-            &nbsp;&nbsp;Activities such as brisk walking, cycling, 
-            and swimming are ideal.</td></tr>
-        <tr><td>2. <strong>Strength Training</strong></td></tr>     
-        <tr><td class="content"> - Include full-body strength training exercises at least 
-            twice a week. Use weights, bodyweight exercises (push-ups, squats, etc.),<br>
-            &nbsp;&nbsp;or resistance bands to strengthen major muscle groups.</td></tr>
-        <tr><td>3. <strong>Flexibility Exercises</strong></td></tr>       
-        <tr><td class="content"> - Incorporate flexibility exercises such as yoga or 
-            stretching to maintain flexibility. This helps with balance and joint 
-            health.</td></tr>
-        <tr><td>4. <strong>Balance Exercises</strong></td></tr>
-        <tr><td class="content"> - Practice exercises to improve balance, such as 
-            standing on one leg or balance exercises.</td></tr>
-    </table>
-
-    <br><br>
-
-    <table>
-        <tr><td><h3>🍽 Dietary Guidelines</h3></td></tr>
-        <tr><td>1. <strong>Balanced Meals</strong></td></tr>
-        <tr><td class="content"> - Incorporate a variety of colorful fruits and 
-            vegetables into your diet. Aim for balanced meals with different 
-            food groups at each meal.</td></tr>
-        <tr><td>2. <strong>Whole Grains</strong></td></tr>     
-        <tr><td class="content"> - Choose whole grains (brown rice, oats, 
-            whole wheat bread) over refined grains. They are rich in fiber 
-            and nutrients.</td></tr>
-        <tr><td>3. <strong>Healthy Protein</strong></td></tr>       
-        <tr><td class="content"> - Include plant-based proteins (beans, 
-            lentils, tofu) and lean animal proteins (chicken breast, fish) 
-            in your diet.</td></tr>
-        <tr><td>4. <strong>Healthy Fats</strong></td></tr>
-        <tr><td class="content"> - Consume foods rich in omega-3 fatty acids 
-            (salmon, walnuts, avocados) and limit intake of saturated and 
-            trans fats.</td></tr>
-        <tr><td>5. <strong>Adequate Hydration</strong></td></tr>
-        <tr><td class="content"> - Drink plenty of water daily and avoid 
-            sugary beverages.</td></tr>
-        <tr><td>6. <strong>Moderate Sodium Intake</strong></td></tr>
-        <tr><td class="content"> - Reduce salt intake and use herbs and 
-            spices to enhance flavor.</td></tr>
-    </table>
-    <br><br><br>
-
 </body>
 </html>
