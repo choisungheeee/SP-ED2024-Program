@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 80%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        /* Top Navigation */
+        .top-nav {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .top-nav a {
+            margin-left: 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .top-nav a:hover {
+            text-decoration: underline;
+        }
+        /* Banner Section */
+        .banner {
+            background-color: green;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .content-section {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .left, .right {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .left {
+            flex: 2;
+        }
+        .right {
+            flex: 1;
+        }
+        .left h2, .right h2 {
+            margin-top: 0;
+        }
+        /* User nickname and visibility switch */
+        .nickname-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .nickname {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 20px;
+            transition: .4s;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            border-radius: 50%;
+            transition: .4s;
+        }
+        input:checked + .slider {
+            background-color: green;
+        }
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+        /* Routine Schedule Form */
+        .routine-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .routine-form .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .routine-form select.category {
+            flex: 2;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .routine-form input[type="text"].details {
+            flex: 8;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }    
+        .add-row-btn {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Added gap between buttons */
+            margin-top: 10px;
+        }
+        .add-row-btn button {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+        }
+        .add-row-btn button:hover {
+            background-color: #ddd;
+        }
+        .post-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+        }
+        .divider {
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px 0;
+        }
+        .post-content {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            font-weight: bold;
+        }
+        .comments-section {
+            margin-top: 20px;
+        }
+        .comments-section h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+        .comment p {
+            margin: 0;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .pagination .page-numbers {
+            display: flex;
+            gap: 10px;
+        }
+        .pagination .page-numbers span {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pagination .page-numbers span:hover {
+            background-color: #ddd;
+        }
+        .pagination .prev, .pagination .next {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pagination .prev:hover, .pagination .next:hover {
+            background-color: #ddd;
+        }
+        .right img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .right img:hover {
+            opacity: 0.8;
+        }
+        .games {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .games img {
+            width: 48%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .games img:hover {
+            opacity: 0.8;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .left, .right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top Navigation -->
+        <div class="top-nav">
+            <a href="Community.html">Community</a>
+            <a href="Mypage.html">My Page</a>
+            <a href="Home.html">Log out</a>
+        </div>
+
+        <!-- Banner Section -->
+        <div class="banner">
+            <h1>Dementia Test</h1>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content-section">
+            <div class="left">
+                <!-- Nickname and Switch -->
+                <div class="nickname-container">
+                    <div class="nickname">My Daily Routine</div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <!-- Routine Schedule Form -->
+                <div class="routine-form">
+                    <div class="row">
+                        <select class="category">
+                            <option value="Exercise">Exercise</option>
+                            <option value="Diet">Diet</option>
+                            <option value="Work">Work</option>
+                            <option value="Self-development">Self-development</option>
+                            <option value="Hobby">Hobby</option>
+                        </select>
+                        <input type="text" class="details" placeholder="Routine Details">
+                        
+                    </div>
+                    <div class="row">
+                        <select class="category">
+                            <option value="Diet">Diet</option>
+                            <option value="Exercise">Exercise</option>
+                            <option value="Work">Work</option>
+                            <option value="Self-development">Self-development</option>
+                            <option value="Hobby">Hobby</option>
+                        </select>
+                        <input type="text" class="details" placeholder="Routine Details">
+                        
+                    </div>
+                    <div class="add-row-btn">
+                        <button type="button" onclick="addRoutineRow()">+ Add More</button>
+                        <button type="button" style="background-color: rgb(28, 119, 255); color: white;">Submmit</button> <!-- Button with inline style -->
+                    </div>
+                    
+            
+                    
+                </div>
+
+                <!-- Community Post Content -->
+                <div class="post-section">
+                    <h2>Community Posts</h2>
+                    <div class="post-title">My Exercise Routine and Tips</div>
+                    <div class="divider"></div> <!-- Divider line between title and content -->
+                    <div class="post-content">
+                        <p>Here is how I maintain my exercise routine and stay healthy. I follow a simple schedule that includes running, weight training, and yoga...</p>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="comments-section">
+                        <h3>Comments</h3>
+                        <div class="comment">
+                            <p><strong>User5830:</strong> Thanks for the tips! I’m going to try adding yoga to my routine.</p>
+                        </div>
+                        <div class="comment">
+                            <p><strong>User0329:</strong> Your routine is inspiring. I’ll share mine soon!</p>
+                        </div>
+                    </div>
+
+                    <!-- Pagination Section -->
+                    <div class="pagination">
+                        <div class="prev">Previous Post</div>
+                        <div class="page-numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <div class="next">Next Post</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <h2>Resources & Games</h2>
+                <div>
+                    <h3>Useful Videos</h3>
+                    <img src="youtube-thumbnail.png" alt="YouTube Thumbnail" onclick="window.open('https://www.youtube.com/watch?v=example', '_blank');">
+                </div>
+                <div class="games">
+                    <img src="sudoku-thumbnail.png" alt="Sudoku" onclick="window.location.href='sudoku.html';">
+                    <img src="tetris-thumbnail.png" alt="Tetris" onclick="window.location.href='tetris.html';">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addRoutineRow() {
+            
+            
+            newRow.className = 'row';
+            newRow.innerHTML = `
+                <select class="category">
+                    <option value="Exercise">Exercise</option>
+                    <option value="Diet">Diet</option>
+                    <option value="Work">Work</option>
+                    <option value="Self-development">Self-development</option>
+                    <option value="Hobby">Hobby</option>
+                </select>
+                <input type="text" class="details" placeholder="Routine Details">
+                
+            `;
+            routineForm.insertBefore(newRow, routineForm.querySelector('.add-row-btn'));
+        }
+    </script>
+</body>
+
+</html>
